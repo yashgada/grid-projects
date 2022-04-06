@@ -137,6 +137,40 @@ Hero
         background: linear-gradient(rgba(241,80,37,0.375),rgba(0,0,0,0.75)),url('images/image-2.jpeg') center/cover fixed no-repeat;
     }
 }
+/* 
+==========
+Cards
+==========
+*/
+.title{
+    text-align: center;
+}
+.cards{
+    padding: 4rem 0;
+}
+.cards-center{
+    width: 80vw;
+    max-width: 1170px;
+    margin: 2rem auto;
+}
+.card{
+    border: 1px solid var(--darkGrey);
+    margin-bottom: 3rem;
+}
+.card-info{
+    padding: 1rem;
+}
+.card-footer{
+    background-color: var(--darkGrey);
+    padding: 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+}
+.card-footer span{
+    color: var(--primaryColor);
+}
+
 *{
     /* border: 1px solid red; */
 }
