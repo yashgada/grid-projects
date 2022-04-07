@@ -18,53 +18,57 @@ Variables
 Global Styles
 ==========
 */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Fira Code", monospace;
-    color: var(--mainBlack);
-    background: var(--mainWhite);
-    line-height: 1.5;
+  font-family: "Fira Code", monospace;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  line-height: 1.5;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-img{
-    width:100%;
-    display: block;
+img {
+  width: 100%;
+  display: block;
 }
-h1,h2,h3,h4{
-    text-transform: capitalize;
-    letter-spacing: var(--mainSpacing);
-    margin-bottom: 1.25rem;
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 1.25rem;
 }
-h1{
-    font-size: 3rem;
+h1 {
+  font-size: 3rem;
 }
-h2{
-    margin-bottom: 0;
+h2 {
+  margin-bottom: 0;
 }
-p{
-    font-weight: 300;
-    font-size: 0.7rem;
-    line-height: 2;
+p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  line-height: 2;
 }
-.btn{
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    text-transform: capitalize;
-    border: 3px solid var(--primaryColor);
-    color: var(--primaryColor);
-    margin: 3rem;
-    transition: var(--mainTransition);
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border: 3px solid var(--primaryColor);
+  color: var(--primaryColor);
+  margin: 3rem;
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
 }
-.btn:hover{
-    background: var(--primaryColor);
-    color: var(--mainWhite);
+.btn:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
 }
 
 /* 
@@ -72,105 +76,157 @@ p{
 Main Navbar
 ==========
 */
-.main-navbar{
-    background-color: var(--darkGrey);
-    padding: 0 2rem;
+.main-navbar {
+  background-color: var(--darkGrey);
+  padding: 0 2rem;
 }
 
-.main-navbar li{
-    list-style-type: none;
+.main-navbar li {
+  list-style-type: none;
 }
-.main-navbar a{
-    text-transform: capitalize;
-    display: block;
-    padding: 1rem 0;
-    color: var(--primaryColor);
-    letter-spacing: var(--mainSpacing);
-    transition: var(--mainTransition);
+.main-navbar a {
+  text-transform: capitalize;
+  display: block;
+  padding: 1rem 0;
+  color: var(--primaryColor);
+  letter-spacing: var(--mainSpacing);
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
 }
-.main-navbar a:hover{
-    color: var(--mainBlack);
+.main-navbar a:hover {
+  color: var(--mainBlack);
 }
 
-@media screen and (min-width:992px) {
-    .main-navbar ul{
-        max-width: 1170px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-    }
-    .main-navbar a{
-        text-align: center;
-    }
+@media screen and (min-width: 992px) {
+  .main-navbar ul {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main-navbar a {
+    text-align: center;
+  }
 }
 /* 
 ==========
 Hero
 ==========
 */
-.hero-header{
-    min-height: 100vh;
-    background: var(--primaryColor);
-    color: var(--mainWhite);
-    display: grid;
-    justify-content: center;
-    align-items: center;
+.hero-header {
+  min-height: 100vh;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  display: grid;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
 }
-.hero-banner{
-    /* background: blue;
+.hero-banner {
+  /* background: blue;
     text-align: center; */
-    padding: 0 1rem;
+  padding: 0 1rem;
 }
-.hero-banner p{
-    width: 80%;
-    max-width: 560px;
-    font-size: 1rem;
+.hero-banner p {
+  width: 80%;
+  max-width: 560px;
+  font-size: 1rem;
 }
 
-@media screen and (max-width:600px) {
-    .hero-banner{
-        padding: 0 3rem;
-    }
+@media screen and (max-width: 600px) {
+  .hero-banner {
+    padding: 0 3rem;
+  }
 }
-@media screen and (min-width:768px) {
-    .hero-header{
-        background: linear-gradient(rgba(241,80,37,0.375),rgba(0,0,0,0.75)),url('images/image-2.jpeg') center/cover fixed no-repeat;
-    }
+@media screen and (min-width: 768px) {
+  .hero-header {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(241, 80, 37, 0.375)),
+        to(rgba(0, 0, 0, 0.75))
+      ),
+      url("images/image-2.jpeg") center/cover fixed no-repeat;
+    background: linear-gradient(rgba(241, 80, 37, 0.375), rgba(0, 0, 0, 0.75)),
+      url("images/image-2.jpeg") center/cover fixed no-repeat;
+  }
 }
 /* 
 ==========
 Cards
 ==========
 */
-.title{
-    text-align: center;
+.title {
+  text-align: center;
 }
-.cards{
-    padding: 4rem 0;
+.cards {
+  padding: 4rem 0;
 }
-.cards-center{
-    width: 80vw;
-    max-width: 1170px;
-    margin: 2rem auto;
+.cards-center {
+  width: 80vw;
+  max-width: 1170px;
+  margin: 2rem auto;
 }
-.card{
-    border: 1px solid var(--darkGrey);
-    margin-bottom: 3rem;
+.card {
+  border: 1px solid var(--darkGrey);
+  margin-bottom: 3rem;
 }
-.card-info{
-    padding: 1rem;
+.card-info {
+  padding: 1rem;
 }
-.card-footer{
-    background-color: var(--darkGrey);
-    padding: 0.5rem 1rem;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    justify-items: center;
+.card-footer {
+  background-color: var(--darkGrey);
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
 }
-.card-footer span{
-    color: var(--primaryColor);
+.card-footer span {
+  color: var(--primaryColor);
 }
 
-*{
-    /* border: 1px solid red; */
+/* To make it responsive, there are two options:
+First is the media queries */
+/* @media screen and (min-width: 768px) {
+  .cards-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .cards-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+/* In this example, even at very small screen sizes, it is responsive */
+
+/* Second is using auto-fit and minmax */
+.cards-center {
+  display: grid;
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+  column-gap: 2rem;
+  /* For 4 columns */
+  /* 96 subtracted because column gap of 2rem is considered. Total 6 rem of 3 gaps between 4 columns */
+  /* grid-template-columns: repeat(auto-fit, minmax(calc(calc(1170px - 96px) / 4), 1fr)); */
+  /* for 3 columns */
+  /* 64 subtracted because column gap of 2rem is considered. Total 4 rem of 2 gaps between 3 columns */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc(calc(1170px - 4rem) / 3), 1fr)
+  );
+}
+
+/* To accomodate for varying size of contents of cards, we must make that component of the card responsive/stretching in all cards. This is how: */
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+* {
+  /* border: 1px solid red; */
 }
